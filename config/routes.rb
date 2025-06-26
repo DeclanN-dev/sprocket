@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
 
-  get "/home", to: "home#home" , as: "home"
+  get "/home", to: "home#home", as: "home"
   get "/api", to: "api#index", as: "api"
   resources :photos
   root "home#home"
