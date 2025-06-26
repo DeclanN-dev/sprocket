@@ -77,7 +77,7 @@
               <h3> Wind </h3>
             </div>
             <div class="col bg-<%= windMPH(@current["wind_mph"]) %> py-5 rounded text-center">
-              <h1 class="weather-number"><%= @current["wind_mph"] %> </h1>
+              <h1 class="weather-number"><%= @current["wind_mph"] %> MPH</h1>
             </div>
           </div>
           <div class="col">
@@ -93,7 +93,7 @@
               <h3> Gust </h3>
             </div>
             <div class="col bg-<%= gustMPH(@current["gust_mph"]) %> py-5 rounded text-center">
-              <h1 class="weather-number"><%= @current["gust_mph"] %> </h1>
+              <h1 class="weather-number"><%= @current["gust_mph"] %> MPH</h1>
             </div>
           </div>
           <div class="col">
@@ -101,7 +101,7 @@
               <h3> Wind Direction </h3>
             </div>
             <div class="col border-success border border-1 py-5 rounded text-center">
-              <h1 class = "weather-number text-black"><%= @current["wind_dir"] %> </h1>
+              <h1 class = "weather-number text-black"><%= @current["wind_dir"] %></h1>
             </div>
           </div>
         </div>
