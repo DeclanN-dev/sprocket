@@ -38,7 +38,7 @@
                         <div class="btn-group" role="group">
                             <%= link_to "View", photo, class:"btn btn-primary" %>
                             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#photoModal-<%= photo.id %>" data-turbo="false">Edit</button>
-                            <%= link_to "Delete", photo_path(photo), method: :delete, class: "btn btn-primary"%>
+                            <%= button_to "Delete", photo_path(photo), method: :delete, class: "btn btn-primary delete"%>
                             <%= render "shared/modal" , photo: photo%>
                         </div>
 

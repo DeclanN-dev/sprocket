@@ -76,7 +76,7 @@
             <div class="row text-center">
               <h3> Wind </h3>
             </div>
-            <div class="col bg-<%= colorTemp(@current["humidity"]) %> py-5 rounded text-center">
+            <div class="col bg-<%= windMPH(@current["wind_mph"]) %> py-5 rounded text-center">
               <h1 class="weather-number"><%= @current["wind_mph"] %> </h1>
             </div>
           </div>
@@ -84,7 +84,7 @@
             <div class="row text-center">
               <h3> Windchill </h3>
             </div>
-            <div class="col bg-<%= colorTemp(@current["windchill_f"]) %> py-5 rounded text-center">
+            <div class="col bg-<%= windchillTemp(@current["windchill_f"]) %> py-5 rounded text-center">
               <h1 class="weather-number"><%= @current["windchill_f"] %> *F </h1>
             </div>
           </div>
@@ -92,7 +92,7 @@
             <div class="row text-center">
               <h3> Gust </h3>
             </div>
-            <div class="col bg-<%= colorTemp(@current["gust_mph"]) %> py-5 rounded text-center">
+            <div class="col bg-<%= gustMPH(@current["gust_mph"]) %> py-5 rounded text-center">
               <h1 class="weather-number"><%= @current["gust_mph"] %> </h1>
             </div>
           </div>
@@ -100,8 +100,8 @@
             <div class="row text-center">
               <h3> Wind Direction </h3>
             </div>
-            <div class="col bg-<%= colorTemp(@current["gust_mph"]) %> py-5 rounded text-center">
-              <h1 class = "weather-number"><%= @current["wind_dir"] %> </h1>
+            <div class="col border-success border border-1 py-5 rounded text-center">
+              <h1 class = "weather-number text-black"><%= @current["wind_dir"] %> </h1>
             </div>
           </div>
         </div>

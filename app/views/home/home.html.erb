@@ -18,11 +18,11 @@
                 <div class="card-body home-container p-5">
                     <h2 class = "card-title"> Public API Demo </h2>
                     <p class="card-text"> 
-                        <h4>
+                        <h5>
                             A demonstration utilizing a basic API. Users can search any location in the world to get up to date weather infromation. Most geographical
                             subdivisions (cities, states, countries, etc.) are searchable by the user. Information on the weather is presented in the form of heat and 
                             wind statistics. 
-                        </h4>
+                        </h5>
                     </p>
                     <p class="card-text">
                         Weather API was sourced from: https://www.weatherapi.com/ under a free trial.
@@ -30,7 +30,7 @@
                     
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary auth-button ">View CRUD Demonstration</a>
+                    <%= link_to "View API Demonstration", api_path, class:"btn btn-primary auth-button" %>
                 </div>
             </div>
             
@@ -48,12 +48,12 @@
                 <div class="card-body home-container p-5">
                     <h2 class = "card-title">CRUD Database Demo </h2>
                     <p class="card-text"> 
-                        <h4>
+                        <h5>
                             A demonstration of Create, Read, Update, and Destroy actions on items in a database in the form of a photo library utilizing ActiveStorage
                             and ActiveRecords. Users can create new photos from images of their choosing and provide an attached name and description. Allows updating 
                             of name, image, and description of any photo. Users are also able to view any photo on a greater scale and able to delete any photo 
                             of their choosing.
-                        </h4>
+                        </h5>
                     </p>
                     <p class="card-text">
                             This demo is not connected to Auth. Any actions can be performed by anyone whether they are logged in or not. No photos are saved on a 
@@ -62,7 +62,7 @@
                     
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary auth-button ">View CRUD Demonstration</a>
+                    <%= link_to "View CRUD Demonstration", photos_path, class:"btn btn-primary auth-button" %>
                 </div>
             </div>
         </div>
@@ -73,17 +73,17 @@
                 <div class="card-body home-container p-5">
                     <h2 class = "card-title"> Auth Demo </h2>
                     <p class="card-text"> 
-                        <h4>
+                        <h5>
                             A demonstration of Auth actions including but not limited to: sign-in, sign-out, sign-up, and password reset. This demonstration also includes
                             editing aspects of the user profile including a Biography. 
-                        </h4>
+                        </h5>
                     </p>
                     <p class="card-text">
                             Auth implementation utilizes the Devise gem: <%=link_to "link", "https://rubygems.org/gems/devise/versions/4.9.3?locale=en" %>
                     </p>
                 </div>
                 <div class="card-footer">
-                    <a href="#" class="btn btn-primary auth-button">View Auth Demonstration</a>
+                    <%= link_to "View Auth Demonstration", edit_user_registration_path, class:"btn btn-primary auth-button" %>
                 </div>
             </div>
         </div>
