@@ -55,6 +55,7 @@ RUN SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
 # Final stage for app image
 FROM base
 
+RUN apt-get update -qq && apt-get install -y libpq5 && rm -rf /var/lib/apt/lists/*
 # Copy built artifacts: gems, application
 COPY --from=build "${BUNDLE_PATH}" "${BUNDLE_PATH}"
 COPY --from=build /rails /rails
