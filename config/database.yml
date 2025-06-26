@@ -1,22 +1,26 @@
-default: &default
+---
+default:
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-
 development:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: declan_development
   username: declan_dev
   password: <%= ENV["PGPASSWORD"] || "" %>
-
 test:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   database: declan_test
   username: declan_dev
   password: <%= ENV["PGPASSWORD"] || "" %>
-
 production:
-  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   url: <%= ENV['DATABASE_URL'] %>
   cable:
     url: <%= ENV['DATABASE_URL'] %>
