@@ -4,9 +4,9 @@
     ">
      
     <div class="text-center text-white hero-title">
-        <h1 class="display-3">Welcome To Sprocket Demo</h1>
-        <p class="lead">A Webapp to Demonstrate Ruby on Rails Aptitude for Sprocket Security</p>
-        <button class="hero-button btn btn-primary">Why I Want to Join Sprocket Security</button>
+        <h1 class="display-3">Sprocket Security Demo</h1>
+        <div class="container hero-subtext rounded "><p class="lead">A WebApp to Demonstrate Ruby on Rails Aptitude for Sprocket Security</p></div>
+        <%= link_to "Why I Want to Join Sprocket Security", letter_path, class:"hero-button btn " %>
     </div>
     
 </div>
@@ -19,13 +19,13 @@
                     <h2 class = "card-title"> Public API Demo </h2>
                     <p class="card-text"> 
                         <h5>
-                            A demonstration utilizing a basic API. Users can search any location in the world to get up to date weather infromation. Most geographical
+                            A demonstration utilizing a basic API. Users can search any location in the world to get up to date weather information. Most geographical
                             subdivisions (cities, states, countries, etc.) are searchable by the user. Information on the weather is presented in the form of heat and 
                             wind statistics. 
                         </h5>
                     </p>
                     <p class="card-text">
-                        Weather API was sourced from: https://www.weatherapi.com/ under a free trial.
+                        Weather API was sourced from weatherapi.com under a free trial <%=link_to "link", "https://rubygems.org/gems/devise/versions/4.9.4?locale=en" %>
                     </p>
                     
                 </div>
@@ -79,7 +79,7 @@
                         </h5>
                     </p>
                     <p class="card-text">
-                            Auth implementation utilizes the Devise gem: <%=link_to "link", "https://rubygems.org/gems/devise/versions/4.9.3?locale=en" %>
+                        Auth implementation utilizes the Devise gem: <%=link_to "link", "https://rubygems.org/gems/devise/versions/4.9.3?locale=en" %>
                     </p>
                 </div>
                 <div class="card-footer">

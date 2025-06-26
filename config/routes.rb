@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   get "/home", to: "home#home", as: "home"
   get "/api", to: "api#index", as: "api"
+  get "/letter", to: "letter#index", as: "letter"
   resources :photos
   root "home#home"
 end
