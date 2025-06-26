@@ -1,0 +1,52 @@
+
+
+<div class="container mt-4 rounded mb-4 p-4" id="demos">
+    
+    <%= form_with url: photos_path, method: :get, local: true, class: "mb-4 " do %>
+        <div class="row justify-content-center">
+            <div class="col"></div>
+            <div class="col align-items-center">
+                <div class="input-group">
+                    <%= text_field_tag :query, params[:query], placeholder: "Search photos", class: "form-control" %>
+                    <button type="submit" class="btn btn-primary">Search</button>                  
+                </div>               
+            </div>
+            <div class="col d-flex justify-content-end">
+                <button type="button" class="btn btn-primary px-5 me-4" data-bs-toggle="modal" data-bs-target="#photoModal" data-turbo="false">
+                    Add Photo +
+                </button>
+            </div>       
+        </div>
+    <% end %>
+   
+<% if @photos.size <= 0 %>
+    <div class="text-center">
+        <%= image_tag "photopointer.png" %>
+    </div>
+<% end %>
+    
+<% @photos.each_slice(4) do |group| %>
+    <div class="row">
+        <% group.each do |photo| %>
+            <div class="col-12 col-md-3 mt-4">
+                <div class="card h-100">
+                    <% if photo.photo.attached? %>
+                        <%= image_tag photo.photo, style: "height: 200px; object-fit: cover;" %>
+                    <% end %>
+                    <div class="card-footer d-flex flex-column">
+                        <h5 class="card-title"><%= photo.name %></h5>
+                        <div class="btn-group" role="group">
+                            <%= link_to "View", photo, class:"btn btn-primary" %>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#photoModal-<%= photo.id %>" data-turbo="false">Edit</button>
+                            <%= link_to "Delete", photo_path(photo), method: :delete, class: "btn btn-primary"%>
+                            <%= render "shared/modal" , photo: photo%>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+<% end %>
+</div>
+<%= render "shared/modalnew" %>

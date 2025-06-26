@@ -1,0 +1,112 @@
+<%= form_with url: api_path, method: :get, local: true, class: "mb-4 mt-4" do %>
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-4">
+          <div class="input-group">
+              <%= text_field_tag :query, params[:query], placeholder: "Search location", class: "form-control" %>
+              <button type="submit" class="btn btn-primary">Search</button>
+          </div>
+        </div>
+    </div>
+<% end %>
+
+
+<% if @location.nil? %>
+  <div class="text-center">
+    <%= image_tag "custompointer.png" %>
+  </div>
+<% end %>
+
+<% if !@location.nil? %>
+  <div>
+    <div class=" bg-white  mb-1 p-3 rounded weather-container">
+      <% if !@location.nil? %>
+        <h1><%= @location["name"] %><span class="badge bg-<%= colorTemp(@current["temp_f"]) %>  mx-3"><%= @current["temp_f"] %>*F</span></h1>
+        
+        <h4> Full Weather report for <%= @location["name"] %>, <%= @location["region"] %>, <%= @location["country"] %> </h4>
+
+      <% end %>
+    </div>
+
+    <% if !@location.nil? %>
+      <div class ="bg-white mb-1 p-3 rounded weather-container">
+        <div class="row p-4">
+        <h1> Temperature </h1> <hr>
+          <div class="col">
+            <div class="row text-center">
+              <h3>Temperature</h3>     
+            </div>
+            <div class="col bg-<%= colorTemp(@current["temp_f"]) %> py-5 rounded text-center">
+              <h1 class="weather-number"> <%= @current["temp_f"] %> *F </h1>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row text-center">
+              <h3>Feels like</h3>
+            </div>
+            <div class="col bg-<%= colorTemp(@current["feelslike_f"]) %> py-5 rounded text-center">
+              <h1 class = "weather-number"> <%= @current["feelslike_f"] %> *F </h1>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row text-center">
+              <h3>Heat Index</h3>
+            </div>
+            <div class="col bg-<%= colorTemp(@current["heatindex_f"]) %> py-5 rounded text-center">
+              <h1 class="weather-number"> <%= @current["heatindex_f"] %> *F </h3>
+            </div>
+          </div>
+           <div class="col">
+            <div class="row text-center">
+              <h3>Humidity</h3>
+            </div>
+            <div class="col bg-<%= colorTemp(@current["humidity"]) %> py-5 rounded text-center">
+              <h1 class="weather-number"> <%= @current["humidity"] %> % </h1>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    <% end %>
+
+    <% if !@location.nil? %>
+      <div class =" bg-white weather-container mb-5 p-3 rounded">
+        <div class="row p-4">
+          <h1> Wind </h1> <hr>
+          <div class="col">
+            <div class="row text-center">
+              <h3> Wind </h3>
+            </div>
+            <div class="col bg-<%= colorTemp(@current["humidity"]) %> py-5 rounded text-center">
+              <h1 class="weather-number"><%= @current["wind_mph"] %> </h1>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row text-center">
+              <h3> Windchill </h3>
+            </div>
+            <div class="col bg-<%= colorTemp(@current["windchill_f"]) %> py-5 rounded text-center">
+              <h1 class="weather-number"><%= @current["windchill_f"] %> *F </h1>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row text-center">
+              <h3> Gust </h3>
+            </div>
+            <div class="col bg-<%= colorTemp(@current["gust_mph"]) %> py-5 rounded text-center">
+              <h1 class="weather-number"><%= @current["gust_mph"] %> </h1>
+            </div>
+          </div>
+          <div class="col">
+            <div class="row text-center">
+              <h3> Wind Direction </h3>
+            </div>
+            <div class="col bg-<%= colorTemp(@current["gust_mph"]) %> py-5 rounded text-center">
+              <h1 class = "weather-number"><%= @current["wind_dir"] %> </h1>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,30 @@
+<div class ="modal fade" tabindex ="-1" id = "photoModal" aria-labelledby="photoModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class ="modal-header">
+                <h4> Create New Photo </h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class = "modal-body">
+                <%= form_with model: @photo do |form| %>
+                    <div class="container">
+                        <div class="mb-3">
+                            <%= form.label :name %>
+                            <%= form.text_field :name, class:"form-control"%>
+                        </div>
+                        <div class="mb-3">
+                            <%= form.label "Select Photo" %>
+                            <%= form.file_field :photo, accept: "image/*" %>
+                        </div>
+                        <div class="mb-3">
+                            <%= form.label :description %>
+                            <%= form.text_area :desc, class:"form-control" %>
+                        </div>
+
+                        <%= form.submit "Create Photo", class:"btn btn-outline-primary"%>
+                    </div>
+                <% end %>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,139 @@
+/*
+ * This is a manifest file that'll be compiled into application.css.
+ *
+ * With Propshaft, assets are served efficiently without preprocessing steps. You can still include
+ * application-wide styles in this file, but keep in mind that CSS precedence will follow the standard
+ * cascading order, meaning styles declared later in the document or manifest will override earlier ones,
+ * depending on specificity.
+ *
+ * Consider organizing styles into separate files for maintainability.
+
+
+ */
+@import url('https://fonts.googleapis.com/css2?family=Kameron:wght@400..700&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+  font-family: "Merriweather", serif;
+  font-optical-sizing: auto;
+  font-weight:100;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+.container-auth{
+  width: 30%;
+}
+
+.container-profile{
+  width: 40%;
+}
+
+.auth-title{
+  color:rgb(38, 53, 82);
+}
+
+.alertbox{
+  display: inline-block;
+  width:30%;
+}
+
+.auth-button{
+  width: 250px
+}
+
+h3{
+  font-weight:600;
+}
+
+h4{
+  font-weight:600;
+  font-style:italic
+}
+
+h1{
+  font-family: "Merriweather", serif;
+  font-weight: 900;
+  color:rgb(38, 53, 82);
+  
+}
+
+.home-image{
+  width:100%;
+}
+
+.filler{
+  flex:1;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+
+body {
+  background-color:#c7e2e7;
+  overflow-x: hidden;
+  padding-top: 70px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.footer{
+  margin:0;
+}
+
+#main-hero{
+  min-height: 60vh;
+  border-bottom: 15px solid rgb(38, 53, 82);
+}
+
+.home-container{
+  height: 45vh;
+}
+
+.display-3{
+  color: white;
+  font-weight: bold;
+}
+
+.hero-button{
+  color:white;
+  background-color:rgb(38, 53, 82);
+  font-weight:bold;
+  padding-left: 8%;
+  padding-right: 8%;
+  padding-bottom: 1%;
+  padding-top:1%;
+  font-size:x-large;
+  margin-top: 10%;
+
+}
+
+.hero-title{
+  margin-top: 3%;
+}
+
+.weather-container{
+  margin-left:20%;
+  margin-right:20%;
+}
+
+.weather-number{
+  font-weight: 900;
+  font-size: 300%;
+  color:white;
+}
+
+.btn-primary{
+  background-color:rgb(38, 53, 82);
+}
+
+.btn-outline-primary{
+  background-color:rgb(38, 53, 82);
+  color:white;
+}
+
