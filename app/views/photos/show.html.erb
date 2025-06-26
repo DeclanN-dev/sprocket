@@ -1,16 +1,16 @@
 <div class="container mt-5 mb-5 p-2" >
     <div class = "row mb-2 d-flex align-items-stretch gx-0">
         <div class ="col-md-2 text-center d-flex ">
-            <%= link_to "Back To Album", photos_path, class:"btn btn-primary"%>
+            <%= link_to "Back To Album", photos_path, class:"btn btn-primary text-center"%>
         </div>
         <div class ="col-md-10 bg-white rounded d-flex ">
-            <h2 class="ps-4 py-1"><%= @photo.name %></h2>
+            <h5 class="ps-4 pt-1"><%= @photo.name %></h5>
         </div>
     </div>
     <div class="card p-0">
         <%= image_tag @photo.photo, style: "height: 60vh;"%>
         <div class="card-footer">
-           <p>dadsad</p>
+           <p><%= @photo.desc %></p>
         </div>
     </div>
 </div>
